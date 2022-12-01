@@ -10,9 +10,9 @@
   .split('\n\n')
   .map((joined) => joined.split('\n').map((num) => parseInt(num)))
   .map((arr) => arr.reduce((a, b) => a + b, 0))
+  .filter((sum) => !isNaN(sum))
   .sort((a, b) => a - b)
   .reverse()
-  .filter((sum) => !isNaN(sum))
   
   // Part 1
   console.log(grouped[0])
